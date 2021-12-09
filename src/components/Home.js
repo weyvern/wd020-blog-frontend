@@ -11,8 +11,8 @@ const Home = () => {
             </p>
             <div className='btn btn-outline-secondary'>Coming soon</div>
           </div>
-          <div className='product-device shadow-sm d-none d-md-block'></div>
-          <div className='product-device product-device-2 shadow-sm d-none d-md-block'></div>
+          <div className='product-device shadow-sm d-none d-lg-block'></div>
+          <div className='product-device product-device-2 shadow-sm d-none d-lg-block'></div>
         </div>
 
         <div className='d-md-flex flex-md-equal w-100 my-md-3 ps-md-3'>
