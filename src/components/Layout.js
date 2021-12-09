@@ -31,6 +31,11 @@ const Layout = () => {
                 </Link>
               </li>
               <li className='nav-item'>
+                <Link to='/register' className='nav-link' aria-current='page'>
+                  Register
+                </Link>
+              </li>
+              <li className='nav-item'>
                 <Link to='/login' className='nav-link' aria-current='page'>
                   Login
                 </Link>
@@ -39,7 +44,9 @@ const Layout = () => {
           </div>
         </div>
       </nav>
-      <Outlet />
+      <div className='container'>
+        <Outlet />
+      </div>
     </div>
   );
 };
