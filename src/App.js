@@ -8,6 +8,7 @@ import Layout from './components/Layout';
 import ProtectedRoute from './components/ProtectedRoute';
 import UserProfile from './components/UserProfile';
 import CreatePost from './components/CreatePost';
+import './App.css';
 
 const App = () => {
   return (

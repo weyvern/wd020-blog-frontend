@@ -1,5 +1,6 @@
 import { useForm } from 'react-hook-form';
 import { Navigate } from 'react-router';
+import { Link } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 
 const Register = () => {
@@ -17,7 +18,7 @@ const Register = () => {
   return (
     <div className='row mt-5 justify-content-center'>
       <div className='col-md-4'>
-        <form onSubmit={handleSubmit(onSubmit)}>
+        <form onSubmit={handleSubmit(onSubmit)} autoComplete='off'>
           <div>
             <label htmlFor='name' className='form-label'>
               Name:
@@ -49,6 +50,11 @@ const Register = () => {
               {...register('password', { required: true })}
             />
             {errors.password && <div className='invalid-feedback'>Password is required</div>}
+          </div>
+          <div>
+            <small>
+              Already have an account? <Link to='/login'>Log in</Link> instead
+            </small>
           </div>
           <button type='submit' className='mt-3 btn btn-success'>
             Register

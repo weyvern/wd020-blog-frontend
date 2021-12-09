@@ -2,7 +2,7 @@ import { Link, Outlet } from 'react-router-dom';
 
 const Layout = () => {
   return (
-    <div>
+    <>
       <nav
         className='navbar navbar-expand-md navbar-dark bg-dark'
         aria-label='Fourth navbar example'
@@ -44,10 +44,8 @@ const Layout = () => {
           </div>
         </div>
       </nav>
-      <div className='container'>
-        <Outlet />
-      </div>
-    </div>
+      <Outlet />
+    </>
   );
 };
 
