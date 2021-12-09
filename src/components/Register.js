@@ -1,6 +1,5 @@
 import { useForm } from 'react-hook-form';
-import { Navigate } from 'react-router';
-import { Link } from 'react-router-dom';
+import { useLocation, Link, Navigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 
 const Register = () => {
@@ -9,12 +8,14 @@ const Register = () => {
     handleSubmit,
     formState: { errors }
   } = useForm();
+  const location = useLocation();
+  const from = location.state?.from?.pathname || '/protected';
 
   const { isAuthenticated, signup } = useAuth();
 
   const onSubmit = formData => signup(formData);
 
-  if (isAuthenticated) return <Navigate to='/protected' />;
+  if (isAuthenticated) return <Navigate to={from} replace />;
   return (
     <div className='row mt-5 justify-content-center'>
       <div className='col-md-4'>

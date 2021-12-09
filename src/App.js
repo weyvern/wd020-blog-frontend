@@ -1,4 +1,5 @@
 import { Routes, Route } from 'react-router-dom';
+import { ToastContainer } from 'react-toastify';
 import AuthState from './context/AuthContext';
 import Home from './components/Home';
 import Login from './components/Login';
@@ -8,11 +9,13 @@ import Layout from './components/Layout';
 import ProtectedRoute from './components/ProtectedRoute';
 import UserProfile from './components/UserProfile';
 import CreatePost from './components/CreatePost';
+import 'react-toastify/dist/ReactToastify.css';
 import './App.css';
 
 const App = () => {
   return (
     <AuthState>
+      <ToastContainer />
       <Routes>
         <Route path='/' element={<Layout />}>
           <Route index element={<Home />} />
